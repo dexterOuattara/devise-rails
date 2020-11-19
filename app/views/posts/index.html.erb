@@ -17,22 +17,10 @@
     <% @posts.each do |post| %>
 
   <div class="col-md-6">
-<!--      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-12 shadow-sm h-md-250 position-relative">-->
-<!--        <div class="col p-8 d-flex flex-column position-static">-->
-<!--          <strong class="d-inline-block mb-2 text-primary">World</strong>-->
-<!--          <h3 class="mb-0"><%#= post.title %></h3>-->
-<!--          <div class="mb-1 text-muted">Nov 12</div>-->
-<!--          <p class="card-text mb-auto"><%#= truncate post.body, length: 100 %></p>-->
-          <%#= link_to 'Continue reading', post %>
-<!--        </div>-->
-<!--        <div class="col p-4 d-flex flex-column position-static">-->
-          <%#= image_tag("andela-2.jpg") %>
-<!--        </div>-->
-<!--      </div>-->
-
     <div class="card img-fluid">
       <%= image_tag("andela-2.jpg", height: '250') %>
       <div class="card-body">
+        <div class="mb-1 text-danger"><%= post.created_at %> <strong class="d-inline-block mb-2 text-primary">World</strong></div>
         <h5 class="card-title"><%= post.title %></h5>
         <p class="card-text"><%= truncate post.body, length: 100 %></p>
       </div>
