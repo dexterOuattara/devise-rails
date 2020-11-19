@@ -1,10 +1,10 @@
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex justify-content-between">
-    <a class="p-2 text-muted" href="#">WEBINAR</a>
-    <a class="p-2 text-muted" href="#">TIPS</a>
-    <a class="p-2 text-muted" href="#">COMPANY NEWS</a>
-    <a class="p-2 text-muted" href="#">SOCIAL MEDIA</a>
-    <a class="p-2 text-muted" href="#">STRATEGY</a>
-    <a class="p-2 text-muted" href="#">CULTURE</a>
+    <% @categories.each do |category| %>
+
+        <a class="p-2 text-muted" href="#"><%= category.title %></a>
+
+    <% end %>
+
   </nav>
 </div>
