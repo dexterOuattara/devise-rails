@@ -18,11 +18,10 @@
 
   <div class="col-md-6">
     <div class="card img-fluid">
-      <%= image_tag("andela-2.jpg", height: '250') %>
+      <%#= image_tag(@post.image) if @post.image.attached?%>
       <div class="card-body">
-        <div class="mb-1 text-danger"><%= post.created_at %> <strong class="d-inline-block mb-2 text-white btn btn-primary">World</strong></div>
+        <div class="mb-1 text-danger"><%= post.created_at.to_s(:short) %> <strong class="d-inline-block mb-2 text-white btn btn-primary">World</strong></div>
         <h5 class="card-title"><%= post.title %></h5>
-        <p class="card-text"><%= truncate post.body, length: 100 %></p>
       </div>
       <div class="card-body">
         <%= link_to 'Continue reading', post %>

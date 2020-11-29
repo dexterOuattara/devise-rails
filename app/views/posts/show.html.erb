@@ -9,7 +9,7 @@
   <div class="row">
 
     <div class="col-12 text-center">
-      <p class="text-center" style="text-align: center"><%= @post.created_at %></p>
+      <p class="text-center" style="text-align: center"><%= @post.created_at.to_s(:short) %></p>
       <p class="text-center" style="text-align: center"><%= @post.title %></p>
       <div class="col-12 text-center">
         <%= image_tag("andela-2.jpg") %>
