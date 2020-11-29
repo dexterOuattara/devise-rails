@@ -18,9 +18,14 @@
 
   <div class="col-md-6">
     <div class="card img-fluid">
+      <div class="col-12 text-center">
+        <%#= image_tag("andela-2.jpg",class:"img-fluid")  %>
+        <img class="image" src="<%= post.image %>">
+
+      </div>
       <%#= image_tag(@post.image) if @post.image.attached?%>
       <div class="card-body">
-        <div class="mb-1 text-danger"><%= post.created_at.to_s(:short) %> <strong class="d-inline-block mb-2 text-white btn btn-primary">World</strong></div>
+        <div class="mb-1 text-danger"><%= post.created_at.to_s(:short) %> <strong class="d-inline-block mb-2 text-white btn btn-primary"><%= post.user_id %></strong></div>
         <h5 class="card-title"><%= post.title %></h5>
       </div>
       <div class="card-body">
